@@ -24,6 +24,7 @@ const Signup = () => {
     // supabaseサインアップ
     const { error: signupError } = await supabase.auth.signUp({
       email: emailRef.current!.value,
+      password: passwordRef.current!.value,
     })
 
     if (signupError) {
